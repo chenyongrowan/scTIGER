@@ -5,8 +5,9 @@ Corresponding Paper: ADD PAPER LINK HERE
 ![MyImage](SIDELINE.png)
 
 ## Functionality
-* Bullet main uses for SIDELINE 
-
+- Cell- and condition-specific GRN inference from paired scRNA-seq datasets
+  - High precision and low false positive rates
+  - Highly robust against dropout noise 
 
 ## Prerequisites 
 ### General 
@@ -58,7 +59,20 @@ SIDELINE is set up as a single-line command with the following flags:
 - --cuda:             CUDA use on when flag included. Leave flag out if using CPU based discovery
 - -o/--output:        Output directory name. Default is 'SIDELINE_Output' 
 
-Give command to run from SIDELINE download for sample datasets
+The general command should appear as: 
+'''
+./runSIDELINE.py -goi Gene1+Gene2+Gene3 -ctrl ./path_to_file -exp ./path_to_file
+'''
+The optional flags can be added to change default parameters as follows: 
+'''
+./runSIDELINE.py -goi Gene1+Gene2+Gene3 -ctrl ./path_to_file -exp ./path_to_file -p 50 -top 90 -zero 0.20 --cuda -o NameOfDirectory_Output -s 2
+'''
+The flags can appear in any order, not just the order detailed here. 
+
+To run a sample dataset from the SIDELINE folder, use the following command: 
+'''
+./runSIDELINE.py -goi Arc+Bdnf+Mapk4+Erg1 -ctrl ./Data/RemoteMemoryFormation/Chen/mouseNeuron_FCneg.csv -exp ./Data/RemoteMemoryFormation/Chen/mouseNeuron_FCpos.csv -p 50 -top 90 -zero 0.30 -o SIDELINE_SampleDatasetResult 
+'''
 
 
 ## Paper
