@@ -41,8 +41,8 @@ Format: A non-normalized CSV file with genes as rows and cells as columns. **Gen
 *Note: Case and control datasets should either be the same cell type and two different experimental conditions OR the same experimental condition and two different cell types* 
 ##### Sample Datasets 
 There are multiple sample datasets under the [Data folder](https://github.com/chenyongrowan/SIDELINE/tree/main/Data). 
-1. The [ProstateCancer](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/ProstateCancer) folder contains datasets for 4 patients. The cells were processed to now contain only endothelial cells. 
-2. The [RemoteMemoryFormation](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/RemoteMemoryFormation) folder contains preprocessed datasets from 2 papers. Both datasets contain only neurons. (FC = Fear Conditioned). The [Rao-Ruiz](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/RemoteMemoryFormation/Rao-Ruiz) dataset is smaller, demonstrating functionality with a small cell count. 
+1. The [ProstateCancer](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/ProstateCancer)[^1] folder contains datasets for 4 patients. The cells were processed to now contain only endothelial cells. 
+2. The [RemoteMemoryFormation](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/RemoteMemoryFormation) folder contains preprocessed datasets from 2 papers. Both datasets contain only neurons. Only fear conditioned (FC) and controls were selected for the [Chen](./Data/RemoteMemoryFormation/Chen)[^2] dataset. The [Rao-Ruiz](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/RemoteMemoryFormation/Rao-Ruiz)[^3] dataset is smaller, demonstrating functionality with a small cell count. 
 ### Running 
 SIDELINE is set up as a single-line command with the following flags: 
 **Required flags**
@@ -65,4 +65,10 @@ Give command to run from SIDELINE download for sample datasets
 Corresponding Paper (peer-reviewed, open access): ADD PAPER NAME AND LINK 
 
 Please cite this paper when using SIDELINE. 
+
+
+[^1]: Heidegger, I., Fotakis, G., Offermann, A., Goveia, J., Daum, S., Salcher, S., Noureen, A., Timmer-Bosscha, H., Schäfer, G., Walenkamp, A., Perner, S., Beatovic, A., Moisse, M., Plattner, C., Krogsdam, A., Haybaeck, J., Sopper, S., Thaler, S., Keller, M. A., . . . Pircher, A. (2022). Comprehensive characterization of the prostate tumor microenvironment identifies CXCR4/CXCL12 crosstalk as a novel antiangiogenic therapeutic target in prostate cancer. Molecular Cancer, 21(1), 132. https://doi.org/10.1186/s12943-022-01597-7 
+[^2]: Chen, M. B., Jiang, X., Quake, S. R., & Südhof, T. C. (2020). Persistent transcriptional programmes are associated with remote memory. Nature (London), 587(7834), 437-442. https://doi.org/10.1038/s41586-020-2905-5 
+[^3]: Rao-Ruiz, P., Couey, J. J., Marcelo, I. M., Bouwkamp, C. G., Slump, D. E., Matos, M. R., van der Loo, R. J., Martins, G. J., van den Hout, M., van, I. W. F., Costa, R. M., van den Oever, M. C., & Kushner, S. A. (2019). Engram-specific transcriptome profiling of contextual memory consolidation. Nat Commun, 10(1), 2232. https://doi.org/10.1038/s41467-019-09960-x 
+
 
