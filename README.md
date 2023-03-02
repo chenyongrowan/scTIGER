@@ -42,9 +42,23 @@ Format: A non-normalized CSV file with genes as rows and cells as columns. **Gen
 ##### Sample Datasets 
 There are multiple sample datasets under the [Data folder](https://github.com/chenyongrowan/SIDELINE/tree/main/Data). 
 1. The [ProstateCancer](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/ProstateCancer) folder contains datasets for 4 patients. The cells were processed to now contain only endothelial cells. 
-2. The [RemoteMemoryFormation](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/RemoteMemoryFormation) folder contains datasets from 2 papers. Both datasets contain only neurons. (FC = Fear Conditioned). The [Rao-Ruiz](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/RemoteMemoryFormation/Rao-Ruiz) dataset is smaller, demonstrating functionality with a small cell count. 
+2. The [RemoteMemoryFormation](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/RemoteMemoryFormation) folder contains preprocessed datasets from 2 papers. Both datasets contain only neurons. (FC = Fear Conditioned). The [Rao-Ruiz](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/RemoteMemoryFormation/Rao-Ruiz) dataset is smaller, demonstrating functionality with a small cell count. 
 ### Running 
+SIDELINE is set up as a single-line command with the following flags: 
+**Required flags**
+- -goi/--geneOfInterest:  One or more genes of interest. Separate multiple genes with a "+" (ex. Arc+Bdnf)
+- -ctrl/--control:        Path to the csv file containing control cells. Provide file with cells as columns and genes as rows. The gene names should be the first column in the file. *The file must contain at least 10 cells*
+- -exp/--experimental:    Path to the csv file containing the case cells. Provide file with cells as columns and genes as rows. The gene names should be the first column in the file. *The file must contain at least 10 cells*
 
+**Optional flags**
+- -p/--permutations:  Number of permutations to run. Default 100
+- -top/--numTopGenes: Number of top correlated genes selected. Default 100
+- -zero/--zeroThresh: Threshold for number of 0's tolerated for a gene. Default 0.30
+- -s/--start:         Starting point for SIDELINE. Default 1 (Run SIDELINE and background). 2 runs only the background
+- --cuda:             CUDA use on when flag included. Leave flag out if using CPU based discovery
+- -o/--output:        Output directory name. Default is 'SIDELINE_Output' 
+
+Give command to run from SIDELINE download for sample datasets
 
 
 ## Paper
