@@ -72,6 +72,8 @@ while args.start <= 3:
         sd.SIDELINE(args.outputDir, args.runs, n, caseW, ctrlW, args.zeroThresh, geneList, allInteractions, args.topGenes, args.cuda)
         #Write user input to .txt file (because I forget, so I know other people do too)
         filepath = args.outputDir + '/commandDetails.txt'
+        command = "touch " + filepath
+        os.system(command)
         with open(filepath, 'a') as file:
            l1 = "# permutations: " + args.runs
            l2 = "\n# top genes: " + args.topGenes
