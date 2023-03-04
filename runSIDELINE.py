@@ -87,8 +87,8 @@ while args.start <= 3:
     elif args.start == 2:
         sd.BACKGROUND(args.outputDir, geneList, args.runs, caseW, ctrlW, n, args.zeroThresh, args.topGenes, args.cuda)
         args.start+=1
-    #elif args.start == 3:
-        #sd.GRAPH(args.outputDir, geneList, args.runs)
+    elif args.start == 3:
+        sd.GRAPH(args.outputDir, geneList, args.runs)
     else:
         args.start+=1
 
