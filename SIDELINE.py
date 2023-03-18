@@ -341,9 +341,9 @@ def GRAPH(outDir, geneList, permutations):
     for g in geneList: 
         actual = pd.read_csv('../to' + g + '_' + str(permutations) + '_counts.csv')
         background = pd.read_csv('../Background/to' + g + '_' + str(permutations) + '_counts.csv')
-        #sig_ct = negBinomial(background)
+        sig_ct = negBinomial(background)
         
-        #actual = removeBackground(actual, sig_ct)
+        actual = removeBackground(actual, sig_ct)
         actual = graphGRN(actual, g)
         completeInteractions = completeInteractions.append(actual, ignore_index = True)
 
