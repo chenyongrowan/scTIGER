@@ -250,7 +250,7 @@ def main(datafiles, evaluation):
         df = pd.DataFrame(columns = ['gene.pair', 'timesteps'])
         for pair in alldelays:
             df.loc[len(df.index)] = [columns[pair[1]]+'>'+columns[pair[0]], alldelays[pair]]
-        df.to_csv('~/SIDELINE/TCDF_Output/outputTemp.csv', index=False)
+        df.to_csv('./TCDF_Output/outputTemp.csv', index=False)
     
         if evaluation:
             # evaluate TCDF by comparing discovered causes with ground truth
