@@ -36,6 +36,7 @@ Corresponding Paper: ADD PAPER LINK HERE
 - warnings 
 - shutil
 - leidenalg
+- torch
 ### Data
 Required: Two scRNA-seq datasets, one case and one control
 Format: A non-normalized CSV file with genes as rows and cells as columns. **Genes must be in first column of CSV file** 
