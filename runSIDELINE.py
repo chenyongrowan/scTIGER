@@ -11,7 +11,7 @@ import argparse
 import sys 
 import warnings 
 import pandas as pd
-import SIDELINE_def as sd
+import SIDELINE as sd
 import shutil
 
 warnings.simplefilter('ignore')
