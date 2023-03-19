@@ -5,9 +5,7 @@ import pandas as pd
 import os
 import scanpy as sc
 import random
-import math 
 from scipy.stats import pearsonr
-from scipy import stats 
 import networkx as nx
 import time
 from datetime import timedelta
