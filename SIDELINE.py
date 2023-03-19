@@ -5,8 +5,6 @@ import pandas as pd
 import os
 import scanpy as sc
 import random
-import bambi as bmb
-import arviz as az 
 import math 
 from scipy.stats import pearsonr
 from scipy import stats 
