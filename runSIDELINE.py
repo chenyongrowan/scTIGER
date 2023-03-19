@@ -72,12 +72,12 @@ while args.start <= 3:
         sd.SIDELINE(args.outputDir, args.runs, n, caseW, ctrlW, args.zeroThresh, geneList, allInteractions, args.topGenes, args.cuda)
         os.system("touch commandDetails.txt")
         with open("commandDetails.txt", 'a') as file:
-           l1 = "# permutations: " + args.runs
-           l2 = "\n# top genes: " + args.topGenes
-           l3 = "\nZero Threshold: " + args.zeroThresh
+           l1 = "# permutations: " + str(args.runs)
+           l2 = "\n# top genes: " + str(args.topGenes)
+           l3 = "\nZero Threshold: " + str(args.zeroThresh)
            l4 = "\nControl file name: " + args.ctrl
            l5 = "\nExperimental file name: " + args.case
-           l6 = "\nCuda use was on: " + args.cuda 
+           l6 = "\nCuda use was on: " + str(args.cuda) 
         file.writelines([l1, l2, l3, l4, l5, l6])
         file.close()
         args.start+=1
