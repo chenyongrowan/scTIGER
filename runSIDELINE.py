@@ -90,6 +90,5 @@ while args.start <= 3:
         args.start+=1
 
 
-os.system('pwd')
 shutil.rmtree('../../TCDF_Output')
 print('SIDELINE finished.')
