@@ -70,7 +70,7 @@ The flags can appear in any order, not just the order detailed here.
 
 To run a sample dataset from the SIDELINE folder, use the following command: 
 ```
-./runSIDELINE.py -goi Arc+Bdnf+Mapk4+Erg1 -ctrl ./Data/RemoteMemoryFormation/Chen/mouseNeuron_FCneg.csv -exp ./Data/RemoteMemoryFormation/Chen/mouseNeuron_FCpos.csv -p 50 -top 90 -zero 0.30 -o SIDELINE_SampleDatasetResult 
+./runSIDELINE.py -goi Arc+Bdnf+Mapk4+Erg1+Creb1 -ctrl ./Data/RemoteMemoryFormation/Chen/mouseNeuron_FCneg.csv -exp ./Data/RemoteMemoryFormation/Chen/mouseNeuron_FCpos.csv -p 50 -top 90 -zero 0.30 -o SIDELINE_SampleDatasetResult 
 ```
 
 
