@@ -76,7 +76,7 @@ while args.start <= 3:
            l2 = "\n# top genes: " + str(args.topGenes)
            l3 = "\nZero Threshold: " + str(args.zeroThresh)
            l4 = "\nControl file name: " + args.ctrl
-           l5 = "\nExperimental file name: " + args.case
+           l5 = "\nExperimental file name: " + args.exp
            l6 = "\nCuda use was on: " + str(args.cuda) 
         file.writelines([l1, l2, l3, l4, l5, l6])
         file.close()
