@@ -86,6 +86,7 @@ while args.start <= 3:
         args.start+=1
     elif args.start == 3:
         sd.GRAPH(args.outputDir, geneList, args.runs)
+        args.start+=1
     else:
         args.start+=1
 
