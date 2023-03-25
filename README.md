@@ -74,9 +74,7 @@ To run a sample dataset from the SIDELINE folder, use the following command:
 ```
 
 ### Visualization 
-SIDELINE outputs .graphml files for each gene of interest as well as a overall interaction map. 
-
-We have included a Cytoscape style file ([SIDELINE_CytoscapeStyle.json](https://github.com/chenyongrowan/SIDELINE/blob/main/SIDELINE_CytoscapeStyle.json)) for your use. 
+SIDELINE outputs .graphml files for each gene of interest as well as a overall interaction map. You can upload these files to your graphing software of choice. Additionally, we have included our Cytoscape style file ([SIDELINE_CytoscapeStyle.json](https://github.com/chenyongrowan/SIDELINE/blob/main/SIDELINE_CytoscapeStyle.json)) for your use. 
 
 
 ## Paper
