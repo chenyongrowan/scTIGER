@@ -73,6 +73,11 @@ To run a sample dataset from the SIDELINE folder, use the following command:
 ./runSIDELINE.py -goi Arc+Bdnf+Mapk4+Erg1+Creb1 -ctrl ./Data/RemoteMemoryFormation/Chen/mouseNeuron_FCneg.csv -exp ./Data/RemoteMemoryFormation/Chen/mouseNeuron_FCpos.csv -p 50 -top 90 -zero 0.30 -o SIDELINE_SampleDatasetResult 
 ```
 
+### Visualization 
+SIDELINE outputs .graphml files for each gene of interest as well as a overall interaction map. 
+
+We have included a Cytoscape style file ([SIDELINE_CytoscapeStyle.json](https://github.com/chenyongrowan/SIDELINE/blob/main/SIDELINE_CytoscapeStyle.json)) for your use. 
+
 
 ## Paper
 Corresponding Paper (peer-reviewed, open access): ADD PAPER NAME AND LINK 
