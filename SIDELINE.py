@@ -165,6 +165,7 @@ def combine_permutations(allInteractions, perms, geneList):
         plt.title(df.columns[0])
         outputGraphName = 'to' + geneList[m] + '_' + str(perms) + '_counts.png'
         plt.savefig(outputGraphName, dpi=300, bbox_inches='tight') 
+        plt.clf()
 
         os.chdir('..')
         
