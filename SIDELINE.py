@@ -317,11 +317,12 @@ def BACKGROUND(outDir, geneList, permutations, rawCase, rawCtrl, cellNumber, zer
     
     
 def GRAPH(outDir, geneList, permutations):
+    locCheck = outDir + '/Background'
     if os.path.isdir(outDir) == True: 
         os.chdir(outDir)
         os.mkdir('./GRN_Visualization')
         os.chdir('./GRN_Visualization')
-    else:
+    if os.path.isdir(locCheck) == True:
         os.mkdir('../GRN_Visualization')
         os.chdir('../GRN_Visualization')
     completeInteractions = pd.DataFrame(columns = ['source', 'target', 'weight', 'arrowShape'])
