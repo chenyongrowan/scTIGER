@@ -52,6 +52,7 @@ We have included a file ([10x_preproccess.py](https://github.com/chenyongrowan/S
 This script will output the gene expression matrix for those files which can be inputted into SIDELINE. 
 
 SIDELINE is set up as a single-line command with the following flags: 
+
 **Required flags**
 - -goi/--geneOfInterest:  One or more genes of interest. Separate multiple genes with a "+" (ex. Arc+Bdnf)
 - -ctrl/--control:        Path to the csv file containing control cells. Provide file with cells as columns and genes as rows. The gene names should be the first column in the file. *The file must contain at least 10 cells*
