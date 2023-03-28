@@ -51,6 +51,7 @@ We have included a file ([10x_preproccess.py](https://github.com/chenyongrowan/S
 - barcodes.tsv.gz
 This script will output the gene expression matrix for those files which can be inputted into SIDELINE. 
 
+#### SIDELINE
 SIDELINE is set up as a single-line command with the following flags: 
 
 **Required flags**
