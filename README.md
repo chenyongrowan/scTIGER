@@ -44,7 +44,7 @@ There are multiple sample datasets under the [Data folder](https://github.com/ch
 1. The [ProstateCancer](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/ProstateCancer)[^1] folder contains datasets for 4 patients. The cells were processed to now contain only endothelial cells. 
 2. The [RemoteMemoryFormation](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/RemoteMemoryFormation) folder contains preprocessed datasets from 2 papers. Both datasets contain only neurons. Only fear conditioned (FC) and controls were selected for the [Chen](./Data/RemoteMemoryFormation/Chen)[^2] dataset. The [Rao-Ruiz](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/RemoteMemoryFormation/Rao-Ruiz)[^3] dataset is smaller, demonstrating functionality with a small cell count. 
 ### Running
-## Preprocessing
+#### Preprocessing
 We have included a file ([10x_preproccess.py](https://github.com/chenyongrowan/SIDELINE/blob/main/10x_preprocess.py)) to convert the resulting files of a 10x sequencing to the gene expression matrix required for SIDELINE. It has a required flag (-d/--directoryPath) which takes the path to a directory with the following files which are output from 10x sequencing: 
 - features.tsv.gz
 - matrix.tsv.gz
