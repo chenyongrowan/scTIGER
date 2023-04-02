@@ -45,7 +45,7 @@ There are multiple sample datasets under the [Data folder](https://github.com/ch
 2. The [RemoteMemoryFormation](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/RemoteMemoryFormation) folder contains preprocessed datasets from 2 papers. Both datasets contain only neurons. Only fear conditioned (FC) and controls were selected for the [Chen](./Data/RemoteMemoryFormation/Chen)[^2] dataset. The [Rao-Ruiz](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/RemoteMemoryFormation/Rao-Ruiz)[^3] dataset is smaller, demonstrating functionality with a small cell count. 
 ### Running
 #### Preprocessing
-We have included a file ([10x_preproccess.py](./utils/10x.preprocess.py)) to convert the resulting files of a 10x sequencing to the gene expression matrix required for SIDELINE. It has a required flag (-d/--directoryPath) which takes the path to a directory with the following files which are output from 10x sequencing: 
+We have included a file ([10x_preproccess.py](https://github.com/chenyongrowan/SIDELINE/blob/main/utils/10x_preprocess.py)) to convert the resulting files of a 10x sequencing to the gene expression matrix required for SIDELINE. It has a required flag (-d/--directoryPath) which takes the path to a directory with the following files which are output from 10x sequencing: 
 - features.tsv.gz
 - matrix.tsv.gz
 - barcodes.tsv.gz
@@ -84,7 +84,7 @@ To run a sample dataset from the SIDELINE folder, use the following command:
 ```
 
 ### Visualization 
-SIDELINE outputs .graphml files for each gene of interest as well as a overall interaction map. You can upload these files to your graphing software of choice. Additionally, we have included our Cytoscape style file ([SIDELINE_CytoscapeStyle.json](./utils/SIDELINE_Cytoscape.json)) for your use. 
+SIDELINE outputs .graphml files for each gene of interest as well as a overall interaction map. You can upload these files to your graphing software of choice. Additionally, we have included our Cytoscape style file ([SIDELINE_CytoscapeStyle.json](https://github.com/chenyongrowan/SIDELINE/blob/main/utils/SIDELINE_CytoscapeStyle.json)) for your use. 
 
 
 ## Paper
