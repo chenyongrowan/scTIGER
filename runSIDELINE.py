@@ -78,8 +78,7 @@ while args.start <= 3:
            l4 = "\nControl file name: " + args.ctrl
            l5 = "\nExperimental file name: " + args.exp
            l6 = "\nCuda use was on: " + str(args.cuda) 
-        file.writelines([l1, l2, l3, l4, l5, l6])
-        file.close()
+           file.writelines([l1, l2, l3, l4, l5, l6])
         args.start+=1
     elif args.start == 2:
         sd.BACKGROUND(args.outputDir, geneList, args.runs, caseW, ctrlW, n, args.zeroThresh, args.topGenes, args.cuda)
