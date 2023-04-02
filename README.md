@@ -45,7 +45,7 @@ There are multiple sample datasets under the [Data folder](https://github.com/ch
 2. The [RemoteMemoryFormation](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/RemoteMemoryFormation) folder contains preprocessed datasets from 2 papers. Both datasets contain only neurons. Only fear conditioned (FC) and controls were selected for the [Chen](./Data/RemoteMemoryFormation/Chen)[^2] dataset. The [Rao-Ruiz](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/RemoteMemoryFormation/Rao-Ruiz)[^3] dataset is smaller, demonstrating functionality with a small cell count. 
 ### Running
 #### Preprocessing
-We have included a file ([10x_preproccess.py](https://github.com/chenyongrowan/SIDELINE/blob/main/10x_preprocess.py)) to convert the resulting files of a 10x sequencing to the gene expression matrix required for SIDELINE. It has a required flag (-d/--directoryPath) which takes the path to a directory with the following files which are output from 10x sequencing: 
+We have included a file ([10x_preproccess.py](./utils/10x.preprocess.py)) to convert the resulting files of a 10x sequencing to the gene expression matrix required for SIDELINE. It has a required flag (-d/--directoryPath) which takes the path to a directory with the following files which are output from 10x sequencing: 
 - features.tsv.gz
 - matrix.tsv.gz
 - barcodes.tsv.gz
@@ -63,6 +63,7 @@ SIDELINE is set up as a single-line command with the following flags:
 - -p/--permutations:  Number of permutations to run. Default 100
 - -top/--numTopGenes: Number of top correlated genes selected. Default 100
 - -zero/--zeroThresh: Threshold for number of 0's tolerated for a gene. Default 0.30
+- -t/--timesteps:     Maximum number of steps allowed between interactions. 0 implies a direct, causal interaction. 1 implies one interaction between the source and target gene. Default is 0. 
 - -s/--start:         Starting point for SIDELINE. Default 1 (Run SIDELINE and background). 2 runs only the background
 - --cuda:             CUDA use on when flag included. Leave flag out if using CPU based discovery
 - -o/--output:        Output directory name. Default is 'SIDELINE_Output' 
@@ -73,7 +74,7 @@ The general command should appear as:
 ```
 The optional flags can be added to change default parameters as follows: 
 ```
-./runSIDELINE.py -goi Gene1+Gene2+Gene3 -ctrl ./path_to_file -exp ./path_to_file -p 50 -top 90 -zero 0.20 --cuda -o NameOfDirectory_Output -s 2
+./runSIDELINE.py -goi Gene1+Gene2+Gene3 -ctrl ./path_to_file -exp ./path_to_file -p 50 -top 90 -zero 0.20 -t 1 --cuda -o NameOfDirectory_Output -s 2
 ```
 The flags can appear in any order, not just the order detailed here. 
 
@@ -83,7 +84,7 @@ To run a sample dataset from the SIDELINE folder, use the following command:
 ```
 
 ### Visualization 
-SIDELINE outputs .graphml files for each gene of interest as well as a overall interaction map. You can upload these files to your graphing software of choice. Additionally, we have included our Cytoscape style file ([SIDELINE_CytoscapeStyle.json](https://github.com/chenyongrowan/SIDELINE/blob/main/SIDELINE_CytoscapeStyle.json)) for your use. 
+SIDELINE outputs .graphml files for each gene of interest as well as a overall interaction map. You can upload these files to your graphing software of choice. Additionally, we have included our Cytoscape style file ([SIDELINE_CytoscapeStyle.json](./utils/SIDELINE_Cytoscape.json)) for your use. 
 
 
 ## Paper
