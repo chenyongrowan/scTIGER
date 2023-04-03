@@ -2,7 +2,7 @@
 The SIngle-cell, DEep-Learning gene regulatory network INferencE (SIDELINE) method is a computational method designed to predict gene regulatory networks (GRNs) using paired datasets of case versus control experiments. After constructing a gene co-differential expression network, SIDELINE employs cell-based pseudotiming, an attention-based convolutional neural network method, and permutation-based significance testing for inferring GRNs among gene modules. 
 
 Corresponding Paper: ADD PAPER LINK HERE 
-![MyImage](SIDELINE.png)
+![MyImage](utils/SIDELINE.png)
 
 ## Functionality
 - Cell- and condition-specific GRN inference from paired scRNA-seq datasets
