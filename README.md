@@ -91,7 +91,7 @@ To run a sample dataset from the SIDELINE folder, use the following command:
 SIDELINE outputs .graphml files for each gene of interest as well as a overall interaction map. You can upload these files to your graphing software of choice. Additionally, we have included our Cytoscape style file ([SIDELINE_CytoscapeStyle.json](https://github.com/chenyongrowan/SIDELINE/blob/main/utils/SIDELINE_CytoscapeStyle.json)) for your use. 
 
 The default style on Cytoscape does not show directionality and regulation type (pictured on the left). The SIDELINE style automatically adds directionality arrows and displays regulation types as either a T for downregulation or an arrow for upregulation (pictured on the right). 
-![CytoscapeStyleImage](https://github.com/chenyongrowan/SIDELINE/blob/main/utils/CytoscapeStyleExample.png)
+![CytoscapeStyleImage](https://github.com/chenyongrowan/SIDELINE/blob/main/utils/CytoscapeStyle.png)
 
 Information on importing the SIDELINE style into Cytoscape can be found [here](https://manual.cytoscape.org/en/stable/Styles.html#styles-tutorials)
 
