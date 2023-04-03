@@ -57,6 +57,8 @@ The command to run this script should follow the following format:
 ```
 
 #### SIDELINE
+The main folder of this repository contains two main files, [SIDELINE.py](/SIDELINE.py) which contains the definitions and functions utilized in [runSIDELINE.py](/runSIDELINE.py) which is the script to run SIDELINE. 
+
 SIDELINE is set up as a single-line command with the following flags: 
 
 **Required flags**
