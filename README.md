@@ -40,12 +40,12 @@ Format: A non-normalized CSV file with genes as rows and cells as columns. **Gen
 
 *Note: Case and control datasets should either be the same cell type and two different experimental conditions OR the same experimental condition and two different cell types* 
 ##### Sample Datasets 
-There are multiple sample datasets under the [Data folder](https://github.com/chenyongrowan/SIDELINE/tree/main/Data). 
-1. The [ProstateCancer](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/ProstateCancer)[^1] folder contains datasets for one patient. The files were processed to contain only one cell type. They are also separated into benign and tumor cells.  
-2. The [RemoteMemoryFormation](https://github.com/chenyongrowan/SIDELINE/tree/main/Data/RemoteMemoryFormation) folder contains preprocessed datasets. Datasets contain only neurons. Only fear conditioned (FC) and controls were selected for the [Chen](./Data/RemoteMemoryFormation/Chen)[^2] dataset.
+There are multiple sample datasets under the [Data folder](/Data). 
+1. The [ProstateCancer](Data/ProstateCancer)[^1] folder contains datasets for one patient. The files were processed to contain only one cell type. They are also separated into benign and tumor cells.  
+2. The [RemoteMemoryFormation](/Data/RemoteMemoryFormation) folder contains preprocessed datasets. Datasets contain only neurons. Only fear conditioned (FC) and controls were selected for the [Chen](./Data/RemoteMemoryFormation/Chen)[^2] dataset.
 ### Running
 #### Preprocessing
-We have included a file ([10x_preproccess.py](https://github.com/chenyongrowan/SIDELINE/blob/main/utils/10x_preprocess.py)) to convert the resulting files of a 10x sequencing to the gene expression matrix required for SIDELINE. It has a required flag (-d/--directoryPath) which takes the path to a directory with the following files which are output from 10x sequencing: 
+We have included a file ([10x_preproccess.py](utils/10x_preprocess.py)) to convert the resulting files of a 10x sequencing to the gene expression matrix required for SIDELINE. It has a required flag (-d/--directoryPath) which takes the path to a directory with the following files which are output from 10x sequencing: 
 - features.tsv.gz
 - matrix.tsv.gz
 - barcodes.tsv.gz
@@ -84,14 +84,16 @@ The flags can appear in any order, not just the order detailed here.
 
 To run a sample dataset from the SIDELINE folder, use the following command: 
 ```
-./runSIDELINE.py -goi Arc+Bdnf+Mapk4+Erg1+Creb1 -ctrl ./Data/RemoteMemoryFormation/Chen/mouseNeuron_FCneg.csv -exp ./Data/RemoteMemoryFormation/Chen/mouseNeuron_FCpos.csv -p 50 -top 90 -zero 0.30 -o SIDELINE_SampleDatasetResult 
+./runSIDELINE.py -goi AR+PTEN+ERG -ctrl ./Data/ProstateCancer/Patient4_Benign_endothelial.csv -exp ./Data/ProstateCancer/Patient4_Tumor_endothelial.csv -p 50 -top 100 -zero 0.15 -o SIDELINE_SampleResult_ProstateCancer
 ```
 
+An example of SIDELINE's output can be found in the [Data/SIDELINE_SampleResult_ProstateCancer](/Data/SIDELINE_SampleResult_ProstateCancer). The main folder contains the raw counts for each gene of interest entered, a .txt file containing the details of the command for later reference, and 3 directories. The [Graphs](/Data/SIDELINE_SampleResult_ProstateCancer/Graphs) directory contains histograms displaying the number of interactions detected with a particular percentage recovery as a function of the percent recovery for each gene. The [Background](/Data/SIDELINE_SampleResult_ProstateCancer/Background) directory contains the background raw counts for each gene of interest entered (the background random selects the top number of genes instead of taking the top correlated genes) and their histograms. The [GRN_Visualization]((/Data/SIDELINE_SampleResult_ProstateCancer/GRN_Visualization) directory contains the .graphml files for each of the genes of interest which can be opened in your network graphing software of choice. If you do not have a prefrence, we provide information about using Cytoscape below. 
+
 ### Visualization 
-SIDELINE outputs .graphml files for each gene of interest as well as a overall interaction map. You can upload these files to your graphing software of choice. Additionally, we have included our Cytoscape style file ([SIDELINE_CytoscapeStyle.json](https://github.com/chenyongrowan/SIDELINE/blob/main/utils/SIDELINE_CytoscapeStyle.json)) for your use. 
+SIDELINE outputs .graphml files for each gene of interest as well as a overall interaction map. You can upload these files to your graphing software of choice. Additionally, we have included our Cytoscape style file ([SIDELINE_CytoscapeStyle.json](utils/SIDELINE_CytoscapeStyle.json)) for your use. 
 
 The default style on Cytoscape does not show directionality and regulation type (pictured on the left). The SIDELINE style automatically adds directionality arrows and displays regulation types as either a T for downregulation or an arrow for upregulation (pictured on the right). 
-![CytoscapeStyleImage](https://github.com/chenyongrowan/SIDELINE/blob/main/utils/CytoscapeStyle.png)
+![CytoscapeStyleImage](/utils/CytoscapeStyle.png)
 
 Information on importing the SIDELINE style into Cytoscape can be found [here](https://manual.cytoscape.org/en/stable/Styles.html#styles-tutorials)
 
