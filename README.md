@@ -56,11 +56,6 @@ The command to run this script should follow the following format:
 ./10x_preprocess.py -d ./Path_to_dir_with_10x_files
 ```
 
-We have also included sample 10x datafiles to run. The following command will convert the sample 10x files into the appropriate gene expression file for SIDELINE: 
-```
-./10x_preprocess.py -d ./Data/ProstateCancer/Patient4Tumor_10xSampleData
-```
-
 #### SIDELINE
 SIDELINE is set up as a single-line command with the following flags: 
 
