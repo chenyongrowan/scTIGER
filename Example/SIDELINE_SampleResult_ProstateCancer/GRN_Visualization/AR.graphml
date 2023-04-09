@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d1" for="edge" attr.name="arrowShape" attr.type="string"/>
+<key id="d0" for="edge" attr.name="weight" attr.type="long"/>
+<graph edgedefault="undirected"><node id="PPP4R2"/>
+<node id="EIF2S1"/>
+<node id="ROBO1"/>
+<node id="CTBS"/>
+<node id="AR"/>
+<node id="GNAI3"/>
+<node id="ITFG1"/>
+<node id="COPA"/>
+<node id="S1PR1"/>
+<node id="NOB1"/>
+<node id="AHNAK2"/>
+<node id="MPRIP"/>
+<node id="TIAL1"/>
+<node id="ATL3"/>
+<node id="CDK2AP2"/>
+<node id="HNRNPUL1"/>
+<node id="OGT"/>
+<node id="HLA-DQA1"/>
+<node id="HLA-DQA2"/>
+<node id="SEPT9"/>
+<node id="NAP1L4"/>
+<node id="MMP24OS"/>
+<node id="LAPTM4B"/>
+<node id="CCT7"/>
+<node id="NMT1"/>
+<node id="SUN2"/>
+<node id="RAP1A"/>
+<node id="LYL1"/>
+<node id="POLR2I"/>
+<node id="CWC15"/>
+<node id="CFI"/>
+<node id="C9orf78"/>
+<node id="REV1"/>
+<node id="NFE2L1"/>
+<node id="TFDP2"/>
+<node id="PDCD7"/>
+<node id="RPS17"/>
+<node id="SCARB2"/>
+<node id="ARHGEF12"/>
+<node id="SPPL2A"/>
+<node id="NAA38"/>
+<node id="GCC2"/>
+<node id="THSD7A"/>
+<node id="G3BP1"/>
+<node id="DENR"/>
+<node id="KIDINS220"/>
+<node id="EPS15"/>
+<node id="POLR2K"/>
+<node id="KRIT1"/>
+<edge source="PPP4R2" target="EIF2S1">
+  <data key="d0">11</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="PPP4R2" target="NMT1">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="PPP4R2" target="ARHGEF12">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="EIF2S1" target="AR">
+  <data key="d0">4</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="EIF2S1" target="POLR2I">
+  <data key="d0">3</data>
+  <data key="d1">T</data>
+</edge>
+<edge source="EIF2S1" target="ITFG1">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="ROBO1" target="CTBS">
+  <data key="d0">5</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="ROBO1" target="MPRIP">
+  <data key="d0">5</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="ROBO1" target="OGT">
+  <data key="d0">4</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="ROBO1" target="SEPT9">
+  <data key="d0">4</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="ROBO1" target="NAP1L4">
+  <data key="d0">4</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="ROBO1" target="AHNAK2">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="ROBO1" target="COPA">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="ROBO1" target="AR">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="ROBO1" target="PDCD7">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="ROBO1" target="THSD7A">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="AR" target="GNAI3">
+  <data key="d0">7</data>
+  <data key="d1">T</data>
+</edge>
+<edge source="AR" target="S1PR1">
+  <data key="d0">5</data>
+  <data key="d1">T</data>
+</edge>
+<edge source="AR" target="TIAL1">
+  <data key="d0">5</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="AR" target="NAP1L4">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="AR" target="GCC2">
+  <data key="d0">3</data>
+  <data key="d1">T</data>
+</edge>
+<edge source="AR" target="POLR2K">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="AR" target="KRIT1">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="ITFG1" target="COPA">
+  <data key="d0">5</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="ITFG1" target="EPS15">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="COPA" target="ATL3">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="COPA" target="AHNAK2">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="NOB1" target="AHNAK2">
+  <data key="d0">5</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="MPRIP" target="HNRNPUL1">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="TIAL1" target="REV1">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="TIAL1" target="NFE2L1">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="TIAL1" target="SCARB2">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="TIAL1" target="NAA38">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="CDK2AP2" target="HNRNPUL1">
+  <data key="d0">4</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="CDK2AP2" target="SEPT9">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="HNRNPUL1" target="CCT7">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="HNRNPUL1" target="PDCD7">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="HLA-DQA1" target="HLA-DQA2">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="SEPT9" target="SUN2">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="SEPT9" target="RAP1A">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="NAP1L4" target="MMP24OS">
+  <data key="d0">4</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="NAP1L4" target="LAPTM4B">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="NAP1L4" target="SPPL2A">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="CCT7" target="CWC15">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="RAP1A" target="LYL1">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="CFI" target="C9orf78">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="CFI" target="TFDP2">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="CFI" target="G3BP1">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="C9orf78" target="RPS17">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="PDCD7" target="DENR">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+<edge source="KIDINS220" target="EPS15">
+  <data key="d0">3</data>
+  <data key="d1">delta</data>
+</edge>
+</graph></graphml>
