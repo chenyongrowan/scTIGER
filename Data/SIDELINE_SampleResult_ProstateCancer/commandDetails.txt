@@ -1,6 +1,0 @@
-# permutations: 50
-# top genes: 100
-Zero Threshold: 0.15
-Control file name: ./Data/ProstateCancer/Dropouts/P4BenignEndothelial_dropout0.05
-Experimental file name: ./Data/ProstateCancer/Dropouts/P4TumorEndothelial_dropout0.05
-Cuda use was on: False
