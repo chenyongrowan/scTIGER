@@ -34,6 +34,9 @@ Corresponding Paper: ADD PAPER LINK HERE
 - shutil
 - leidenalg
 - torch
+- bambi
+- math
+- arviz
 ### Data
 Required: Two scRNA-seq datasets, one case and one control
 Format: A non-normalized CSV file with genes as rows and cells as columns. **Genes must be in first column of CSV file** 
@@ -90,7 +93,7 @@ To run a sample dataset from the SIDELINE folder, use the following command:
 ./runSIDELINE.py -goi AR+PTEN+ERG -ctrl ./Data/ProstateCancer/Patient4_Benign_endothelial.csv -exp ./Data/ProstateCancer/Patient4_Tumor_endothelial.csv -p 50 -top 100 -zero 0.15 -o SIDELINE_SampleResult_ProstateCancer
 ```
 
-We have also included an [Example](/Example) folder which allows users to run the example to make sure their download of SIDELINE is functioning. To use it, simply download the SIDELINE package, make the Example folder your working directory, and run [./runExample.py](/Example/runExample.py) in your terminal. It will output the [SIDELINE_SampleResult_ProstateCancer(/Example/SIDELINE_SampleResult_ProstateCancer) directory. 
+We have also included an [Example](/Example) folder which allows users to run the example to make sure their download of SIDELINE is functioning. To use it, simply download the SIDELINE package, make the Example folder your working directory, and run [./runExample.py](/Example/runExample.py) in your terminal. It will output the [SIDELINE_SampleResult_ProstateCancer](/Example/SIDELINE_SampleResult_ProstateCancer) directory. 
 
 This directory contains sample output for SIDELINE. The main folder contains the raw counts for each gene of interest entered, a .txt file containing the details of the command for later reference, and 3 directories. The [Graphs](/Example/SIDELINE_SampleResult_ProstateCancer/Graphs) directory contains histograms displaying the number of interactions detected with a particular percentage recovery as a function of the percent recovery for each gene. The [Background](/Example/SIDELINE_SampleResult_ProstateCancer/Background) directory contains the background raw counts for each gene of interest entered (the background random selects the top number of genes instead of taking the top correlated genes) and their histograms. The [GRN_Visualization](/Example/SIDELINE_SampleResult_ProstateCancer/GRN_Visualization) directory contains the .graphml files for each of the genes of interest which can be opened in your network graphing software of choice. If you do not have a prefrence, we provide information about using Cytoscape below. 
 
