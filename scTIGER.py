@@ -89,7 +89,7 @@ def predict_GRN(geneList, corrResult, numTopRanked, normCD, cudaUse,timeDelay):
         geneMatrix.to_csv(tcdfInput, index=False)
         os.environ['MKL_THREADING_LAYER'] = 'GNU'
         if cudaUse == True:
-            command = 'python ./utils/runTCDF.py --data ' + tcdfInput + ' --cuda > ./TCDF_Output/tcdfRunning.txt'    #If you want to use SIDELINE from a different working directory, change this to the absolute path
+            command = 'python ./utils/runTCDF.py --data ' + tcdfInput + ' --cuda > ./TCDF_Output/tcdfRunning.txt'   
         else:
             command = 'python ./utils/runTCDF.py --data ' + tcdfInput + ' > ./TCDF_Output/tcdfRunning.txt'
         os.system(command)
@@ -203,7 +203,7 @@ def graphGRN(actual_df, gene, timeDelay):
 
 
 
-def SIDELINE(outDir, permutations, cellNumber, rawCase, rawCtrl, zeroThresh, geneList, allInteractions, topGenes, cudaUse, timeDelay):
+def scTIGER(outDir, permutations, cellNumber, rawCase, rawCtrl, zeroThresh, geneList, allInteractions, topGenes, cudaUse, timeDelay):
     os.mkdir(outDir)
     for i in range(permutations):
         start = time.time()
