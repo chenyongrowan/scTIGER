@@ -2,7 +2,7 @@
 The **S**ingle-**c**ell **T**emporal **I**nference of **Ge**ne **R**egulatory (scTIGER) Networks method is a computational method designed to predict gene regulatory networks (GRNs) using paired datasets of case versus control experiments. After constructing a gene co-differential expression network, scTIGER employs cell-based pseudotiming, an attention-based convolutional neural network method, and permutation-based significance testing for inferring GRNs among gene modules. 
 
 Corresponding Paper: ADD PAPER LINK HERE 
-![MyImage](utils/SIDELINE.png)
+![MyImage](utils/scTIGER.png)
 
 ## Functionality
 - Cell- and condition-specific GRN inference from paired scRNA-seq datasets
@@ -60,7 +60,7 @@ The command to run this script should follow the following format:
 ```
 
 #### scTIGER
-The main folder of this repository contains two main files, [scTIGER.py](/SIDELINE.py) which contains the definitions and functions utilized in [run_scTIGER.py](/runSIDELINE.py) which is the script to run scTIGER. 
+The main folder of this repository contains two main files, [scTIGER.py](/scTIGER.py) which contains the definitions and functions utilized in [run_scTIGER.py](/run_scTIGER.py) which is the script to run scTIGER. 
 
 scTIGER is set up as a single-line command with the following flags: 
 
@@ -91,15 +91,15 @@ The flags can appear in any order, not just the order detailed here.
 
 To run a sample dataset from the scTIGER folder, use the following command: 
 ```
-./run_scTIGER.py -goi AR+PTEN+ERG -ctrl ./Data/ProstateCancer/Patient4_Benign_endothelial.csv -exp ./Data/ProstateCancer/Patient4_Tumor_endothelial.csv -p 50 -top 100 -zero 0.15 -o scTIGER_SampleResult_ProstateCancer
+./run_scTIGER.py -goi AR+PTEN+ERG -ctrl ./Data/ProstateCancer/Patient4_Benign_endothelial.csv -exp ./Data/ProstateCancer/Patient4_Tumor_endothelial.csv -p 50 -top 100 -zero 0.15 -o SampleResult_ProstateCancer
 ```
 
-We have also included an [Example](/Example) folder which allows users to run the example to make sure their download of scTIGER is functioning. To use it, simply download the scTIGER package, make the Example folder your working directory, and run [./runExample.py](/Example/runExample.py) in your terminal. It will output the [scTIGER_SampleResult_ProstateCancer](/Example/SIDELINE_SampleResult_ProstateCancer) directory. 
+We have also included an [Example](/Example) folder which allows users to run the example to make sure their download of scTIGER is functioning. To use it, simply download the scTIGER package, make the Example folder your working directory, and run [./runExample.py](/Example/runExample.py) in your terminal. It will output the [scTIGER_SampleResult_ProstateCancer](/Example/SampleResult_ProstateCancer) directory. 
 
-This directory contains sample output for scTIGER. The main folder contains the raw counts for each gene of interest entered, a .txt file containing the details of the command for later reference, and 3 directories. The [Graphs](/Example/SIDELINE_SampleResult_ProstateCancer/Graphs) directory contains histograms displaying the number of interactions detected with a particular percentage recovery as a function of the percent recovery for each gene. The [GRN_Visualization](/Example/SIDELINE_SampleResult_ProstateCancer/GRN_Visualization) directory contains the .graphml files for each of the genes of interest which can be opened in your network graphing software of choice. If you do not have a prefrence, we provide information about using Cytoscape below. 
+This directory contains sample output for scTIGER. The main folder contains the raw counts for each gene of interest entered, a .txt file containing the details of the command for later reference, and 3 directories. The [Graphs](/Example/SampleResult_ProstateCancer/Graphs) directory contains histograms displaying the number of interactions detected with a particular percentage recovery as a function of the percent recovery for each gene. The [GRN_Visualization](/Example/SampleResult_ProstateCancer/GRN_Visualization) directory contains the .graphml files for each of the genes of interest which can be opened in your network graphing software of choice. If you do not have a prefrence, we provide information about using Cytoscape below. 
 
 ### Visualization 
-scTIGER outputs .graphml files for each gene of interest as well as a overall interaction map. You can upload these files to your graphing software of choice. Additionally, we have included our Cytoscape style file ([scTIGER_CytoscapeStyle.json](utils/SIDELINE_CytoscapeStyle.json)) for your use. 
+scTIGER outputs .graphml files for each gene of interest as well as a overall interaction map. You can upload these files to your graphing software of choice. Additionally, we have included our Cytoscape style file ([scTIGER_CytoscapeStyle.json](utils/scTIGER_CytoscapeStyle.json)) for your use. 
 
 The default style on Cytoscape does not show directionality and regulation type (pictured on the left). The scTIGER style automatically adds directionality arrows and displays regulation types as either a T for downregulation or an arrow for upregulation (pictured on the right). 
 ![CytoscapeStyleImage](/utils/CytoscapeStyle.png)
