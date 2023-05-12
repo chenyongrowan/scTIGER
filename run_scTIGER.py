@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 Madison Dautle
-02.02.2023
-SIDELINE - The SIngle-cell, DEep-Learning gene regulatory network INferenceE method
+Created: 02.02.2023
+Updated: 05.12.2023
+scTIGER - Single-cell Temporal Inference of Gene Regulatory Networks
 """
 
 import os
@@ -11,7 +12,7 @@ import argparse
 import sys 
 import warnings 
 import pandas as pd
-import SIDELINE as sd
+import scTIGER as sd
 import shutil
 
 warnings.simplefilter('ignore')
@@ -23,12 +24,12 @@ parser.add_argument("-p", "--permutations", dest = "runs", default = 100, help="
 parser.add_argument("-top", '--numTopGenes', dest = 'topGenes', default = 100, help = "Number of top correlated genes selected. Default 100", type=int)
 parser.add_argument("-zero", "--zeroThresh", dest = "zeroThresh", default = 0.30, help="Threshold for number of 0's tolerated for a gene. Default 0.40", type=float)
 parser.add_argument("-t", "--timesteps", dest = "timeDelay", default = 0, help = "The number of steps allowed between detected interactions. Default is 0", type = int)
-parser.add_argument("-s", "--start", dest = "start", default = 1, help="Starting point for SIDELINE. Default 1 (Run SIDELINE and background). 2 is background only", type=int)
+parser.add_argument("-s", "--start", dest = "start", default = 1, help="Starting point for scTIGER. Default 1 (Run scTIGER and make GRN files). 2 is only for generating GRN files from existing scTIGER output (if you want to change the alpha value, you can just run step 2).", type=int)
 parser.add_argument("-goi", "--geneOfInterest", dest = "goi", help="One or more genes of interest separated by +")
 parser.add_argument("-ctrl", "--control", dest = "ctrl", help="Control condition. A csv file with cells as columns and genes as rows. Must contain at least 10 cells.")
 parser.add_argument("-exp", "--experimental",dest ="exp", help="Case/experimental condition. A csv file with cells as columns and genes as rows. Must contain at least 10 cells.")
 parser.add_argument("--cuda", dest = 'cuda', action = 'store_true', help="CUDA use on. Default is off.")
-parser.add_argument("-o", "--output", dest = 'outputDir', default = 'SIDELINE_Output', help ="Output directory name. Default is 'SIDELINE_Output", type=str)
+parser.add_argument("-o", "--output", dest = 'outputDir', default = 'scTIGER_Output', help ="Output directory name. Default is 'scTIGER_Output", type=str)
 parser.add_argument("-a", "--alpha", dest = 'alpha', default = 0.05, help='Alpha value to determine significiant interactions threshold. Default 0.05', type=float)
 args = parser.parse_args()
 
@@ -77,9 +78,9 @@ hold = 0
 os.mkdir('./TCDF_Output')
     
 #######################################################################################################################################
-while args.start <= 3:
+while args.start <= 2:
     if args.start == 1: 
-        hold = sd.SIDELINE(args.outputDir, args.runs, n, caseW, ctrlW, args.zeroThresh, geneList, allInteractions, args.topGenes, args.cuda, args.timeDelay)
+        hold = sd.scTIGER(args.outputDir, args.runs, n, caseW, ctrlW, args.zeroThresh, geneList, allInteractions, args.topGenes, args.cuda, args.timeDelay)
         os.system("touch commandDetails.txt")
         with open('commandDetails.txt', 'a') as file:
            l1 = "# permutations: " + str(args.runs)
@@ -95,9 +96,7 @@ while args.start <= 3:
     elif args.start == 2:
         sd.GRAPH(args.outputDir, geneList, args.runs, args.timeDelay, args.alpha, hold)
         args.start+=1
-    else:
-        args.start+=1
 
 
 shutil.rmtree('../../TCDF_Output')
-print('SIDELINE finished.')
+print('scTIGER finished.')
