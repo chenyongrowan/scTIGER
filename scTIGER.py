@@ -205,7 +205,7 @@ def graphGRN(actual_df, gene, timeDelay):
 
 
 
-def SIDELINE(outDir, permutations, cellNumber, rawCase, rawCtrl, zeroThresh, geneList, allInteractions, topGenes, cudaUse, timeDelay):
+def scTIGER(outDir, permutations, cellNumber, rawCase, rawCtrl, zeroThresh, geneList, allInteractions, topGenes, cudaUse, timeDelay):
     os.mkdir(outDir)
     for i in range(permutations):
         start = time.time()
