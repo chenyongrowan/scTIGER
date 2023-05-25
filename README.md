@@ -11,12 +11,12 @@ Corresponding Paper: ADD PAPER LINK HERE
 
 ## Prerequisites 
 ### General 
-- Python >= 3.5
-- [PyTorch](https://pytorch.org/get-started/locally/)
+- Python (3.9.2)
+- [PyTorch](https://pytorch.org/get-started/locally/) 
 - Optional: CUDA 
 ### Required Python Packages 
 - numpy
-- pandas
+- pandas (1.4.3)
 - random
 - heapq
 - copy
@@ -27,14 +27,14 @@ Corresponding Paper: ADD PAPER LINK HERE
 - networkx
 - argparse
 - scipy
-- scanpy
+- scanpy 
 - time
 - argparse
 - warnings 
 - shutil
 - leidenalg
 - torch
-- bambi
+- bambi (0.8.0)
 - math
 - arviz
 ### Data
