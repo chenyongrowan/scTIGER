@@ -34,7 +34,7 @@ Corresponding Paper: ADD PAPER LINK HERE
 - shutil
 - leidenalg
 - torch
-- bambi (0.8.0)
+- bambi (0.9.0)
 - math
 - arviz
 ### Data
