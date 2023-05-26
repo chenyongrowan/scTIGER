@@ -230,7 +230,6 @@ def scTIGER(outDir, permutations, cellNumber, rawCase, rawCtrl, zeroThresh, gene
         case.reset_index(drop=True, inplace=True)
         ctrl.reset_index(drop=True, inplace=True)
         caseMctrl = case.subtract(ctrl)
-        caseMctrl = normalize(caseMctrl, zeroThresh)
         if len(caseMctrl.columns) >= 10000: 
             print("You have " + str(len(caseMctrl.columns)) + " genes after normalization and filtering. You may want to increase the zero threshold for faster performance.")
         else: 
