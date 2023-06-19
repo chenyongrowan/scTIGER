@@ -1,4 +1,4 @@
-name: scTIGER3
+name: scTIGER
 channels:
   - defaults
 dependencies:
@@ -63,4 +63,4 @@ dependencies:
     - typing-extensions==4.6.2
     - tzdata==2023.3
     - zipp==3.15.0
-prefix: /home/madison/.conda/envs/scTIGER3
+prefix: /home/madison/.conda/envs/scTIGER
