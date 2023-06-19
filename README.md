@@ -37,6 +37,9 @@ Corresponding Paper: ADD PAPER LINK HERE
 - bambi (0.9.0)
 - math
 - arviz
+
+[scTIGER.yml](/utils/scTIGER.yml) is provided for your use with these packages installed. 
+
 ### Data
 Required: Two scRNA-seq datasets, one case and one control
 Format: A non-normalized CSV file with genes as rows and cells as columns. **Genes must be in first column of CSV file** 
