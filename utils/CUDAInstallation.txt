@@ -1,8 +1,0 @@
-#Conda Version 22.9.0
-conda create -n scTIGER python=3.9.2
-conda activate scTIGER
-pip install scanpy
-pip install bambi==0.9.0
-pip install pandas 1.4.3
-pip install torch torchvision torchaudio
-pip install leidenalg
