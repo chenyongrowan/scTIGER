@@ -20,7 +20,7 @@ os.environ['KMP_WARNINGS'] = 'off'
 parser = argparse.ArgumentParser()
 #Flags 
 parser.add_argument("-p", "--permutations", dest = "runs", default = 100, help="Number of permutations to run. Default 100", type=int)
-parser.add_argument("-top", '--numTopGenes', dest = 'topGenes', default = 100, help = "Number of top correlated genes selected. Default 100", type=int)
+parser.add_argument("-top", '--numTopGenes', dest = 'topGenes', default = 50, help = "Number of top correlated genes selected. Default 50", type=int)
 parser.add_argument("-zero", "--zeroThresh", dest = "zeroThresh", default = 0.30, help="Threshold for number of 0's tolerated for a gene. Default 0.40", type=float)
 parser.add_argument("-t", "--timesteps", dest = "timeDelay", default = 0, help = "The number of steps allowed between detected interactions. Default is 0", type = int)
 parser.add_argument("-s", "--start", dest = "start", default = 1, help="Starting point for scTIGER. Default 1 (Run scTIGER and determine significant intereactions+generate GRN files). 2 is only for determining significant interactions with a predious scTIGER run with a new alpha value", type=int)
