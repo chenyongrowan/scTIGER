@@ -1,7 +1,7 @@
 # scTIGER (Single-cell Temporal Inference of Gene Regulatory Networks)
 The **S**ingle-**c**ell **T**emporal **I**nference of **Ge**ne **R**egulatory (scTIGER) Networks method is a computational method designed to predict gene regulatory networks (GRNs) using paired datasets of case versus control experiments. After constructing a gene co-differential expression network, scTIGER employs cell-based pseudotiming, an attention-based convolutional neural network method, and permutation-based significance testing for inferring GRNs among gene modules. 
 
-Corresponding Paper: ADD PAPER LINK HERE 
+Corresponding Paper: Dautle, M., Zhang, S., Chen, Y. (2023). scTIGER: a Deep-Learning Method for Inferring Gene Regulatory Networks from Case versus Control scRNA-seq Datasets. (under review).  
 ![MyImage](utils/scTIGER.png)
 
 ## Functionality
@@ -110,7 +110,7 @@ The default style on Cytoscape does not show directionality and regulation type 
 Information on importing the scTIGER style into Cytoscape can be found [here](https://manual.cytoscape.org/en/stable/Styles.html#styles-tutorials)
 
 ## Paper
-Corresponding Paper (peer-reviewed, open access): ADD PAPER NAME AND LINK 
+Corresponding Paper: Dautle, M., Zhang, S., Chen, Y. (2023). scTIGER: a Deep-Learning Method for Inferring Gene Regulatory Networks from Case versus Control scRNA-seq Datasets. (under review). 
 
 Please cite this paper when using scTIGER. 
 
