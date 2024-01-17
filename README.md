@@ -17,28 +17,18 @@ Corresponding Paper: Dautle M, Zhang S, Chen Y. scTIGER: A Deep-Learning Method 
 ### Required Python Packages 
 - numpy
 - pandas (1.4.3)
-- random
-- heapq
-- copy
-- os
-- sys
 - matplotlib
 - pylab
 - networkx
 - argparse
 - scipy
 - scanpy 
-- time
 - argparse
-- warnings 
-- shutil
 - leidenalg
-- torch
 - bambi (0.9.0)
-- math
 - arviz
 
-[scTIGER.yml](/utils/scTIGER.yml) is provided for your use with these packages installed. 
+These packages can be installed using the bash scripts provided. If your device is CUDA capable, use the [install_scTIGER_CUDA.sh](/utils/install_scTIGER_CUDA.sh) file. Otherwise, use the standard, CPU install file [(install_scTIGER_CPU.sh)](/utils/install_scTIGER_CPU.sh). 
 
 ### Data
 Required: Two scRNA-seq datasets, one case and one control
