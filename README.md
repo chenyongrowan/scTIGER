@@ -11,6 +11,7 @@ Corresponding Paper: Dautle M, Zhang S, Chen Y. scTIGER: A Deep-Learning Method 
 
 ## Prerequisites 
 ### General 
+- Linux 
 - Python (3.9.2)
 - [PyTorch](https://pytorch.org/get-started/locally/) 
 - Optional: CUDA 
@@ -28,7 +29,26 @@ Corresponding Paper: Dautle M, Zhang S, Chen Y. scTIGER: A Deep-Learning Method 
 - bambi (0.9.0)
 - arviz
 
-These packages can be installed using the bash scripts provided. If your device is CUDA capable, use the [install_scTIGER_CUDA.sh](/utils/install_scTIGER_CUDA.sh) file. Otherwise, use the standard, CPU install file [(install_scTIGER_CPU.sh)](/utils/install_scTIGER_CPU.sh). 
+### Installation 
+We recommend installing the packages using a conda environment. Information on downloading Anaconda can be found [here](https://www.anaconda.com/download). 
+You may use the following steps to install the necessary packages to a new environment. Note there is a different installation process for CUDA capable machines. 
+
+General installation:
+1. conda create -n scTIGER
+2. conda activate scTIGER
+3. conda install pytorch torchvision torchaudio cpuonly -c pytorch
+4. pip install numpy pandas==1.4.3 matplotlib networkx argparse scipy scanpy leidenalg bambi==0.9.0 arviz numba==0.56.4
+
+CUDA capable installation:
+1. conda create -n scTIGER
+2. conda activate scTIGER
+3. conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+4. pip install numpy pandas==1.4.3 matplotlib networkx argparse scipy scanpy leidenalg bambi==0.9.0 arviz numba==0.56.4
+
+You may need to make the scTIGER program executable. You can do this by using the following command:
+```
+chmod +x run_scTIGER.py
+```
 
 ### Data
 Required: Two scRNA-seq datasets, one case and one control
@@ -82,7 +102,7 @@ The optional flags can be added to change default parameters as follows:
 ```
 The flags can appear in any order, not just the order detailed here. 
 
-To run a sample dataset from the scTIGER folder, use the following command: 
+To run a sample dataset from the scTIGER folder, use the following command AFTER unzipping [Patient4_Benign_endothelial.zip](./Data/ProstateCancer/Patient4_Benign_endothelial.zip): 
 ```
 ./run_scTIGER.py -goi AR+PTEN+ERG -ctrl ./Data/ProstateCancer/Patient4_Benign_endothelial.csv -exp ./Data/ProstateCancer/Patient4_Tumor_endothelial.csv -p 50 -top 100 -zero 0.15 -o SampleResult_ProstateCancer
 ```
