@@ -19,15 +19,14 @@ Corresponding Paper: Dautle M, Zhang S, Chen Y. scTIGER: A Deep-Learning Method 
 - numpy
 - pandas (1.4.3)
 - matplotlib
-- pylab
 - networkx
 - argparse
 - scipy
 - scanpy 
-- argparse
 - leidenalg
 - bambi (0.9.0)
 - arviz
+- numba (0.56.4)
 
 ### Installation 
 We recommend installing the packages using a conda environment. Information on downloading Anaconda can be found [here](https://www.anaconda.com/download). 
