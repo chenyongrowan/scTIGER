@@ -16,16 +16,16 @@ Corresponding Paper: Dautle M, Zhang S, Chen Y. scTIGER: A Deep-Learning Method 
 - [PyTorch](https://pytorch.org/get-started/locally/) 
 - Optional: CUDA 
 ### Required Python Packages 
-- numpy
+- numpy (1.22.0)
 - pandas (1.4.3)
-- matplotlib
-- networkx
-- argparse
-- scipy
-- scanpy 
-- leidenalg
+- matplotlib (3.8.2)
+- networkx (3.1)
+- argparse (1.4.0)
+- scipy (1.11.4)
+- scanpy (1.9.6)
+- leidenalg (0.10.1)
 - bambi (0.9.0)
-- arviz
+- arviz (0.16.1)
 - numba (0.56.4)
 
 ### Installation 
