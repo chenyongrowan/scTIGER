@@ -33,13 +33,13 @@ We recommend installing the packages using a conda environment. Information on d
 You may use the following steps to install the necessary packages to a new environment. Note there is a different installation process for CUDA capable machines. 
 
 General installation:
-1. conda create -n scTIGER
+1. conda create -n scTIGER python=3.9.2
 2. conda activate scTIGER
 3. conda install pytorch torchvision torchaudio cpuonly -c pytorch
 4. pip install numpy pandas==1.4.3 matplotlib networkx argparse scipy scanpy leidenalg bambi==0.9.0 arviz numba==0.56.4
 
 CUDA capable installation:
-1. conda create -n scTIGER
+1. conda create -n scTIGER python=3.9.2
 2. conda activate scTIGER
 3. conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 4. pip install numpy pandas==1.4.3 matplotlib networkx argparse scipy scanpy leidenalg bambi==0.9.0 arviz numba==0.56.4
