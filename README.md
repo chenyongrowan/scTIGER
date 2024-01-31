@@ -83,7 +83,7 @@ scTIGER is set up as a single-line command with the following flags:
 
 **Optional flags**
 - -p/--permutations:  Number of permutations to run. Default 100
-- -top/--numTopGenes: Number of top correlated genes selected. Default 100
+- -top/--numTopGenes: Number of top correlated genes selected. Default 50
 - -zero/--zeroThresh: Threshold for number of 0's tolerated for a gene. Default 0.30
 - -t/--timesteps:     Maximum number of steps allowed between interactions. 0 implies a direct, causal interaction. 1 implies one interaction between the source and target gene. Default is 0. 
 - -s/--start:         Starting point for scTIGER. Default 1 (Run scTIGER and and generate GRN files). 2 uses existing scTIGER output to generate GRN visualization files if you'd like to change the alpha level. 
