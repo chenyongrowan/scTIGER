@@ -5,6 +5,8 @@ Corresponding Paper: Dautle M, Zhang S, Chen Y. scTIGER: A Deep-Learning Method 
 ![MyImage](utils/scTIGER.png)
 
 ## Functionality
+We provide a [YouTube Video](https://youtu.be/BnjeY4xSUVg?si=4MTyzxX2ESmU34eQ) which provides details about how to apply the pipeline to your own data and the potential uses for our pipeline. 
+
 - Cell- and condition-specific GRN inference from paired scRNA-seq datasets
   - High precision and low false positive rates
   - Highly robust against dropout noise 
@@ -29,6 +31,8 @@ Corresponding Paper: Dautle M, Zhang S, Chen Y. scTIGER: A Deep-Learning Method 
 - numba (0.56.4)
 
 ### Installation 
+We provide a [YouTube Video](https://youtu.be/8OuqL75Q4ZY?si=vyUjRDlhRMqRaDwG) to help you install scTIGER. It follows the same steps as detailed below. 
+
 We recommend installing the packages using a conda environment. Information on downloading Anaconda can be found [here](https://www.anaconda.com/download). 
 You may use the following steps to install the necessary packages to a new environment. Note there is a different installation process for CUDA capable machines. 
 
