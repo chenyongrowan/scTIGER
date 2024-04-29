@@ -38,10 +38,15 @@ You may use the following steps to install the necessary packages to a new envir
 
 General installation:
 conda create -n scTIGER python=3.9.2
+
 conda activate scTIGER
+
 conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 cpuonly==2.0 conda-forge::fsspec -c pytorch
+
 pip install pandas==1.4.3 matplotlib==3.8.2 networkx==3.1 argparse==1.4.0 scipy==1.11.4 scanpy==1.9.6 leidenalg==0.10.1 bambi==0.9.0 arviz==0.16.1 pyarrow numba==0.56.4
+
 export MKL_THREADING_LAYER=GNU
+
 conda install numpy==1.22.0
 
 CUDA capable installation:
