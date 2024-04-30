@@ -14,24 +14,24 @@ We provide a [YouTube Video](https://youtu.be/BnjeY4xSUVg?si=4MTyzxX2ESmU34eQ) w
 ## Prerequisites 
 ### General 
 - Linux 
-- Python (3.9.2)
+- Python 
 - [PyTorch](https://pytorch.org/get-started/locally/) 
 - Optional: CUDA 
 ### Required Python Packages 
-- numpy (1.22.0)
-- pandas (1.4.3)
-- matplotlib (3.8.2)
-- networkx (3.1)
-- argparse (1.4.0)
-- scipy (1.11.4)
-- scanpy (1.9.6)
-- leidenalg (0.10.1)
-- bambi (0.9.0)
-- arviz (0.16.1)
-- numba (0.56.4)
+- numpy 
+- pandas 
+- matplotlib 
+- networkx  
+- scipy 
+- scanpy 
+- leidenalg 
+- bambi 
+- arviz 
+- numba
+- All packages with versions from our successful running of scTIGER can be found [here](/utils/scTIGER_PackageVersionsALL)
 
 ### Installation 
-We provide a [YouTube Video](https://youtu.be/8OuqL75Q4ZY?si=vyUjRDlhRMqRaDwG) to help you install scTIGER. It follows the same steps as detailed below. 
+We provide a [YouTube Video](https://youtu.be/8OuqL75Q4ZY?si=vyUjRDlhRMqRaDwG) to help you install scTIGER. The steps vary slightly as package updates have been made since we created the installation video, but the steps below can be used in the same fashion as the video details to install and use scTIGER.  
 
 We recommend installing the packages using a conda environment. Information on downloading Anaconda can be found [here](https://www.anaconda.com/download). 
 You may use the following steps to install the necessary packages to a new environment. Note there is a different installation process for CUDA capable machines. 
