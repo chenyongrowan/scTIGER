@@ -28,7 +28,7 @@ We provide a [YouTube Video](https://youtu.be/BnjeY4xSUVg?si=4MTyzxX2ESmU34eQ) w
 - bambi 
 - arviz 
 - numba
-- All packages with versions from our successful running of scTIGER can be found [here](/utils/scTIGER_PackageVersionsALL)
+- All packages with versions from our successful running of scTIGER can be found [here](/utils/scTIGER_PackageVersionsALL.txt)
 
 ### Installation 
 We provide a [YouTube Video](https://youtu.be/8OuqL75Q4ZY?si=vyUjRDlhRMqRaDwG) to help you install scTIGER. The steps vary slightly as package updates have been made since we created the installation video, but the steps below can be used in the same fashion as the video details to install and use scTIGER.  
