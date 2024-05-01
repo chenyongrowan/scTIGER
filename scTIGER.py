@@ -4,7 +4,6 @@ import numpy as np
 import pandas as pd
 import os
 import scanpy as sc
-import random
 from scipy.stats import pearsonr
 import networkx as nx
 import time
@@ -20,7 +19,7 @@ def checkGeneList(geneList, normCD, allOutput_df):
         if gene not in normCD.columns:
             print(gene +" not in matrix")
             geneList.remove(gene)
-            allOutput_df.drop(gene, inplace=True, axis=1)
+            allOutput_df = allOutput_df.drop(gene, axis=1)
     return geneList, allOutput_df
 
 
@@ -76,11 +75,8 @@ def predict_GRN(geneList, corrResult, numTopRanked, normCD, cudaUse,timeDelay):
     for j in range(len(geneList)):
         interactionsPP = pd.DataFrame(columns = ('gene.pair', 'timesteps'))
         df = corrResult[corrResult['toGene'] == geneList[j]] 
-        absList = list()
-        for value in df['corr']:
-            absolute = abs(value)
-            absList.append(absolute)
-        df['AbsVal'] = absList 
+        absList = pd.DataFrame({'AbsVal': df['corr'].abs()})
+        df = pd.concat([df, absList], axis=1) 
         topGenes = df.sort_values(['AbsVal'], ascending=[False])
         gm = topGenes['fromGene'].head(numTopRanked + 1)
         gl = gm.tolist()
@@ -94,7 +90,7 @@ def predict_GRN(geneList, corrResult, numTopRanked, normCD, cudaUse,timeDelay):
             command = 'python ./utils/runTCDF.py --data ' + tcdfInput + ' > ./TCDF_Output/tcdfRunning.txt'
         os.system(command)
         TCDFRes = pd.read_csv(tcdfOutput)
-        interactionsPP=interactionsPP.append(TCDFRes, ignore_index=True)
+        interactionsPP = pd.concat([interactionsPP, TCDFRes], ignore_index=True)
         if len(interactionsPP) > 0:
             interactionsPP[['fromGene','toGene']] = interactionsPP.iloc[:,0].str.split('>',expand=True)
             interactionsPP.insert(len(interactionsPP.T), "Direction", np.nan)
@@ -119,7 +115,8 @@ def predict_GRN(geneList, corrResult, numTopRanked, normCD, cudaUse,timeDelay):
         t = 0
         while t < len(interactionsPP):
             item = interactionsPP.iloc[t, interactionsPP.columns.get_loc('gene.pair')]
-            allInteractions = allInteractions.append({geneList[j]:item}, ignore_index = True)
+            new_df = pd.DataFrame({geneList[j]: [item]})
+            allInteractions = pd.concat([allInteractions, new_df], ignore_index=True)
             t+=1
         print("Gene:\t" + geneList[j])
     return allInteractions
@@ -243,7 +240,7 @@ def scTIGER(outDir, permutations, cellNumber, rawCase, rawCtrl, zeroThresh, gene
         
         # 4. Detect gene interactions
         interactions = predict_GRN(geneList, corr, topGenes, caseMctrl, cudaUse, timeDelay)
-        allInteractions = allInteractions.append(interactions, ignore_index=True)
+        allInteractions = pd.concat([allInteractions, interactions], ignore_index=True)
         del(interactions)
 
         exec_time = (time.time()-start)
@@ -282,8 +279,9 @@ def GRAPH(outDir, geneList, permutations, timeDelay, alpha_val, hold):
         
         actual = removeBackground(actual, sig_ct, g)
         actual = graphGRN(actual, g, timeDelay)
-        completeInteractions = completeInteractions.append(actual, ignore_index = True)
+        completeInteractions = pd.concat([completeInteractions, actual], ignore_index=True)
         
     G = nx.from_pandas_edgelist(completeInteractions, edge_attr=True)
     fileout = 'OverallInteractions.graphml'
     nx.write_graphml(G, fileout)
+
