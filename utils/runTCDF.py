@@ -252,19 +252,19 @@ def main(datafiles, evaluation):
             df.loc[len(df.index)] = [columns[pair[1]]+'>'+columns[pair[0]], alldelays[pair]]
         df.to_csv('./TCDF_Output/outputTemp.csv', index=False)
     
-        if evaluation:
+        #if evaluation:
             # evaluate TCDF by comparing discovered causes with ground truth
-            print("\n===================Evaluation for", stringdatafile,"===============================")
-            FP, TP, FPdirect, TPdirect, FN, FPs, FPsdirect, TPs, TPsdirect, FNs, F1, F1direct = evaluate(datafiles[datafile], allcauses, columns)
-            totalF1.append(F1)
-            totalF1direct.append(F1direct)
+         #   print("\n===================Evaluation for", stringdatafile,"===============================")
+          #  FP, TP, FPdirect, TPdirect, FN, FPs, FPsdirect, TPs, TPsdirect, FNs, F1, F1direct = evaluate(datafiles[datafile], allcauses, columns)
+           # totalF1.append(F1)
+            #totalF1direct.append(F1direct)
 
             # evaluate delay discovery
-            extendeddelays, readgt, extendedreadgt = getextendeddelays(datafiles[datafile], columns)
-            percentagecorrect = evaluatedelay(extendeddelays, alldelays, TPs, receptivefield)*100
-            print("Percentage of delays that are correctly discovered: ", percentagecorrect,"%")
+            #extendeddelays, readgt, extendedreadgt = getextendeddelays(datafiles[datafile], columns)
+            #percentagecorrect = evaluatedelay(extendeddelays, alldelays, TPs, receptivefield)*100
+            #print("Percentage of delays that are correctly discovered: ", percentagecorrect,"%")
             
-        print("==================================================================================")
+        #print("==================================================================================")
         
         if args.plot:
             plotgraph(stringdatafile, alldelays, columns)
