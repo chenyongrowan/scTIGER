@@ -43,7 +43,7 @@ conda activate scTIGER
 git clone https://github.com/chenyongrowan/scTIGER
 cd scTIGER
 chmod +x run_scTIGER.py
-unzip Data/ProstateCancer/Patient4_Benign_endothelial
+unzip Data/ProstateCancer/Patient4_Benign_endothelial.zip
 conda install pytorch==2.1.2 torchvision torchaudio cpuonly==2.0 -c pytorch
 conda install madison.dautle::sctiger
 ```
@@ -55,7 +55,7 @@ conda activate scTIGER
 git clone https://github.com/chenyongrowan/scTIGER
 cd scTIGER
 chmod +x run_scTIGER.py
-unzip Data/ProstateCancer/Patient4_Benign_endothelial
+unzip Data/ProstateCancer/Patient4_Benign_endothelial.zip
 conda install pytorch==2.1.2 torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 conda install madison.dautle::sctiger
 ```
