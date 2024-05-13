@@ -38,7 +38,7 @@ You may use the following steps to install the necessary packages to a new envir
 
 General installation:
 ```
-conda create -n scTIGER python=3.9
+conda create -n scTIGER python=3.11
 conda activate scTIGER
 git clone https://github.com/chenyongrowan/scTIGER
 cd scTIGER
@@ -50,7 +50,7 @@ conda install madison.dautle::sctiger
 
 CUDA capable installation:
 ```
-conda create -n scTIGER python=3.9
+conda create -n scTIGER python=3.11
 conda activate scTIGER
 git clone https://github.com/chenyongrowan/scTIGER
 cd scTIGER
