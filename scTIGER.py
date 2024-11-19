@@ -275,6 +275,7 @@ def GRAPH(outDir, geneList, permutations, timeDelay, alpha_val, hold):
 
     for g in geneList: 
         actual = pd.read_csv('../' + g + '.csv')
+        actual.columns = ['Interactions', g]
         sig_ct = calSigLvl(actual, g, alpha_val)
         
         actual = removeBackground(actual, sig_ct, g)
